@@ -32,6 +32,9 @@ public class FirstClass {
         ultraBook.checkWeight();
         ultraBook.checkYearPrice();
 
+        LeapYear obj = new LeapYear(2000);
+        System.out.println(obj.rok);
+        obj.checkRok();
     }
 
 

@@ -24,7 +24,7 @@ public  class Notebook {
         }
     }
 
-    public void checkWeight() {
+        public void checkWeight() {
         if(this.weight < 500){
             System.out.println("This device is light.");
         } else if (weight > 500 && weight < 900){
