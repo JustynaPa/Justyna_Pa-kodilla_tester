@@ -27,17 +27,16 @@ public class User {
 
         User[] users = {beata, krzysztof, milena, bartek, milosz, adam};
 
-        int [] ages = {17, 26, 31, 27, 21, 33};
         float sum = 0;
         for (int i = 0; i < users.length; i++) {
-            sum += ages[i];
+            sum += users[i].age;
         }
         sum /= users.length;
         System.out.println(sum);
 
-        for (int i = 1; i < users.length; i++) {
-            if ( > sum) {
-                System.out.println();
+        for (int i = 0; i < users.length; i++) {
+            if ( users[i].age > sum) {
+                System.out.println(users[i].age + users[i].name);
             } else {
                 System.out.println();
             }
