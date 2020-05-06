@@ -2,16 +2,16 @@ import java.util.Random;
 
 public class RandomNumbers {
 
-    static int max;
-    static int min;
-
+ 
     public static void main(String[] args) {
+
+
         Random random  = new Random();
 
         int result = 0;
         int sum = 0;
-        max = -1;
-        min = 31;
+        int max = -1;
+        int min = 31;
 
         while (sum < 5000) {
             result++;
@@ -34,10 +34,12 @@ public class RandomNumbers {
     }
 
     public static int getMaxValue() {
+        int max = 0;
         return max;
     }
 
     public static int getMinValue() {
+        int min = 0;
         return min;
     }
 }
