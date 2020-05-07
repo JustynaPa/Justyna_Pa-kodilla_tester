@@ -1,0 +1,20 @@
+package com.kodilla.abstracts.homework;
+
+public abstract class Job {
+
+    private int salary;
+    private String responsibilities;
+    private String workerName;
+
+    public Job(int salary, String responsibilities) {
+        this.salary = salary;
+        this.responsibilities = responsibilities;
+    }
+
+    public abstract void workerName();
+
+    public String getResponsibilities() {
+        return responsibilities;
+    }
+
+}

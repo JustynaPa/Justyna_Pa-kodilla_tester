@@ -14,13 +14,8 @@ public class RelationTesting {
         Windows14.turnOn();
         Windows14.turnOff();
 
-
         Windows14.displayIssueYear();
         Windows12.displayIssueYear();
-
-
-
-
 
     }
 }

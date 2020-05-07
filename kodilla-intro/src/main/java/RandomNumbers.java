@@ -5,16 +5,13 @@ public class RandomNumbers {
     int max;
     int min;
 
- 
     public static void main(String[] args) {
 
         RandomNumbers randomNumbers = new RandomNumbers();
         randomNumbers.generateNumbers();
 
-
         System.out.println("Min value is: " + randomNumbers.getMinValue());
         System.out.println("Max value is: " + randomNumbers.getMaxValue());
-
 
     }
      public void generateNumbers() {
@@ -42,7 +39,6 @@ public class RandomNumbers {
     public int getMaxValue() {
         return max;
     }
-
     public int getMinValue() {
         return min;
     }
