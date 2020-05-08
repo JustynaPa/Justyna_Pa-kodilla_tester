@@ -16,6 +16,14 @@ public class Person {
         return firstName;
     }
 
+    public String getPersonResponsibilities(Job job) {
+        return job.getResponsibilities();
+    }
+
+    public Job getJob() {
+        return job;
+    }
+
     public static void main(String[] args) {
 
         Nurse nurse = new Nurse(2000, "care, injections");
@@ -26,9 +34,9 @@ public class Person {
         Person kinga = new Person("Kinga", 37, teacher);
         Person agata = new Person("Agata", 50, dentist);
 
-        System.out.println(joanna.getFirstName() + " Responsibilities are: " + joanna.job.getResponsibilities());
-        System.out.println(kinga.getFirstName() + " Responsibilities are: " + kinga.job.getResponsibilities());
-        System.out.println(agata.getFirstName() + " Responsibilities are: " + agata.job.getResponsibilities());
+        System.out.println(joanna.getFirstName() + " Responsibilities are: " + joanna.getPersonResponsibilities(joanna.getJob()));
+        System.out.println(kinga.getFirstName() + " Responsibilities are: " + kinga.getPersonResponsibilities(kinga.getJob()));
+        System.out.println(agata.getFirstName() + " Responsibilities are: " + agata.getPersonResponsibilities(agata.getJob()));
 
     }
 
