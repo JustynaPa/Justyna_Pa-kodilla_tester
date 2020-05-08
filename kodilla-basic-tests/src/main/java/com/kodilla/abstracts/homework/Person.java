@@ -18,9 +18,9 @@ public class Person {
 
     public static void main(String[] args) {
 
-        Nurse nurse = new Nurse();
-        Teacher teacher = new Teacher();
-        Dentist dentist = new Dentist();
+        Nurse nurse = new Nurse(2000, "care, injections");
+        Teacher teacher = new Teacher(2500, "teaching");
+        Dentist dentist = new Dentist(5000, "tooths treatment");
 
         Person joanna = new Person("Joanna", 23, nurse);
         Person kinga = new Person("Kinga", 37, teacher);
