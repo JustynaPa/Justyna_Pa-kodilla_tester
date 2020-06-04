@@ -28,7 +28,7 @@ public class UserValidatorTestSuite {
     }
 
     @ParameterizedTest
-    @ValueSource(strings = {"88alva@op.pl", "amigosrigos", "@zuzi.ro", "antek@radar", "ąźć@bravo.pl", " "})
+    @ValueSource(strings = {"amigosrigos", "@zuzi.ro", "antek@radar", "ąźć@bravo.pl", " "})
     public void shouldReturnFalseForIncorrectEmailContent(String email) {
         assertFalse(userValidator.validateEmail(email));
     }
