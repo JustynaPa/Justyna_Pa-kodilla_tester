@@ -2,7 +2,7 @@ package com.kodilla.exception.homework;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class WarehouseTestSuite {
 
@@ -10,10 +10,11 @@ public class WarehouseTestSuite {
     public void testGetOrder() throws OrderDoesntExistException {
         //given
         Warehouse warehouse = new Warehouse();
+        warehouse.addOrder(new Order("f/123"));
         //when
-        Order orderResult = warehouse.getOrder("a/123");
+        Order orderResult = warehouse.getOrder("f/123");
         //then
-        assertEquals("a/123", orderResult);
+        assertEquals(new Order("f/123"), orderResult);
     }
 
     @Test (expected = OrderDoesntExistException.class)
