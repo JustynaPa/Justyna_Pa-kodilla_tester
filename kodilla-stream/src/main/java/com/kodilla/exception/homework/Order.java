@@ -3,7 +3,6 @@ package com.kodilla.exception.homework;
 import java.util.Objects;
 
 public class Order {
-
     private String number;
 
     public Order(String number) {
@@ -21,12 +20,10 @@ public class Order {
         Order order = (Order) o;
         return Objects.equals(getNumber(), order.getNumber());
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(getNumber());
     }
-
     @Override
     public String toString() {
         return "Order{" +

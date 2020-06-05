@@ -6,7 +6,6 @@ import org.junit.jupiter.params.provider.ValueSource;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class UserValidatorTestSuite {
-
     private UserValidator userValidator = new UserValidator();
 
     @ParameterizedTest
@@ -14,23 +13,19 @@ public class UserValidatorTestSuite {
     public void shouldReturnTrueForCorrectUserNameContent(String userName) {
         assertTrue(userValidator.validateUsername(userName));
     }
-
     @ParameterizedTest
     @ValueSource(strings = {"amix123@bingo.com", "r.a1234@tlen.pl", "ab_c@fiufiu.fr"})
     public void shouldReturnTrueForCorrectEmailContent(String email) {
         assertTrue(userValidator.validateEmail(email));
     }
-
     @ParameterizedTest
     @ValueSource(strings = {"ab", "1b", "amir!@#$%^&*()", "wąskięwicz", "ąęźć", " "})
     public void shouldReturnFalseForIncorrectUserNameContent(String userName) {
         assertFalse(userValidator.validateUsername(userName));
     }
-
     @ParameterizedTest
     @ValueSource(strings = {"amigosrigos", "@zuzi.ro", "antek@radar", "ąźć@bravo.pl", " "})
     public void shouldReturnFalseForIncorrectEmailContent(String email) {
         assertFalse(userValidator.validateEmail(email));
     }
-
 }

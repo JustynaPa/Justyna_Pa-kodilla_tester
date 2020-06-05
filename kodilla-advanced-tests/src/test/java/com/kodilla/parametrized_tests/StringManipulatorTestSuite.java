@@ -1,15 +1,16 @@
 package com.kodilla.parametrized_tests;
 
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class StringManipulatorTestSuite {
+public class StringManipulatorTestSuite<delimiter> {
     private StringManipulator manipulator = new StringManipulator();
 
     @ParameterizedTest
-    @CsvSource(value = {"test,tset", "OtHEr,rehto", "EVent,tneve", "null,llun", "A,a"})
+    @CsvFileSource(resources = "/stringWithLowerCase.csv")
     public void shouldReverseStringWithLowerCase(String input, String expected) {
         assertEquals(expected, manipulator.reverseWithLowerCase(input));
     }
@@ -21,9 +22,9 @@ public class StringManipulatorTestSuite {
     }
 
     @ParameterizedTest
-    @CsvSource(value = {"te,st:1", "..OtHEr :0", "E,V,e,n.t:3", "null :0", "A:0"}, delimiter = ':')
+    @CsvFileSource(resources = "/stringWithLowerCase.csv", numLinesToSkip = 1, delimiter = ':')
     public void shouldCountNumberOfCommas(String input, int expected) {
-        assertEquals(expected, manipulator.countNumberOfCommas(input));
+       assertEquals(expected, manipulator.countNumberOfCommas(input));
     }
 
 }
