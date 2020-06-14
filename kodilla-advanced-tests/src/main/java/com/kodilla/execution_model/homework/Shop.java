@@ -26,7 +26,6 @@ public class Shop {
                 .collect(Collectors.toList());
     }
 
-
     public double toSumAllOrdersValues() {
         double sum = 0;
         for(Order order : orders) {
