@@ -14,7 +14,7 @@ public class CalculatorTestSuite {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic");
         Calculator bean = context.getBean(Calculator.class);
         double testValue = bean.add(2,2);
-        Assertions.assertEquals(4, testValue);
+        Assertions.assertEquals(4, testValue, 0.01);
     }
 
     @Test
@@ -22,7 +22,7 @@ public class CalculatorTestSuite {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic");
         Calculator bean = context.getBean(Calculator.class);
         double testValue = bean.subtract(2,10);
-        Assertions.assertEquals(-8, testValue);
+        Assertions.assertEquals(-8, testValue, 0.01);
     }
 
     @Test
@@ -30,7 +30,7 @@ public class CalculatorTestSuite {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic");
         Calculator bean = context.getBean(Calculator.class);
         double testValue = bean.multiply(0,10);
-        Assertions.assertEquals(0, testValue);
+        Assertions.assertEquals(0, testValue, 0.01);
     }
 
     @Test
@@ -38,7 +38,6 @@ public class CalculatorTestSuite {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic");
         Calculator bean = context.getBean(Calculator.class);
         double testValue = bean.divide(50,100);
-        Assertions.assertEquals(0.5, testValue);
+        Assertions.assertEquals(0.5, testValue, 0.01);
     }
-
 }
