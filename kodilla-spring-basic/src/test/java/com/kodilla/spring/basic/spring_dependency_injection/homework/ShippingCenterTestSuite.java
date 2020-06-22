@@ -41,5 +41,4 @@ public class ShippingCenterTestSuite {
         String testResult = bean.sendPackage("Kownackiego 5", 50.01);
         Assertions.assertNotEquals("Kownackiego 5, Poznań", testResult);
     }
-
 }
