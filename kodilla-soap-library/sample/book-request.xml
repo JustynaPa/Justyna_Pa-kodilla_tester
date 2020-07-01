@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:kodilla="http://kodilla.com/courses/soap/library">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <kodilla:getBookRequest>
+            <kodilla:signature>SCIFI/2018/SB/P</kodilla:signature>
+        </kodilla:getBookRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

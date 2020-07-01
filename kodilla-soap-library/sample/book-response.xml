@@ -1,0 +1,14 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header/>
+    <SOAP-ENV:Body>
+        <ns2:getBookResponse xmlns:ns2="http://kodilla.com/courses/soap/library">
+            <ns2:signature>
+                <ns2:signature>CRI/2020/HC/W</ns2:signature>
+                <ns2:title>W głębi lasu</ns2:title>
+                <ns2:author>Harlan Coben</ns2:author>
+                <ns2:publicationYear>2020</ns2:publicationYear>
+                <ns2:genre>CRIME</ns2:genre>
+            </ns2:signature>
+        </ns2:getBookResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
