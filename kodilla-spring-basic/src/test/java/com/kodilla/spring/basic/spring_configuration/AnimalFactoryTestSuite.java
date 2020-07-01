@@ -12,16 +12,16 @@ import java.util.List;
 @SpringBootTest
 public class AnimalFactoryTestSuite {
 
-    @Test
-    public void testDogCreated() {
+    //@Test
+    //public void testDogCreated() {
         //Given
-        ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
-        Dog dog = context.getBean(Dog.class);
+        //ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
+        //Dog dog = context.getBean(Dog.class);
         //When
-        String voice = dog.getVoice();
+        //String voice = dog.getVoice();
         //Then
-        Assertions.assertEquals("Bark bark", voice);
-    }
+        //Assertions.assertEquals("Bark bark", voice);
+    //}
 
     @Test
     public void shouldCreateDogBeanAndFetchByBeanName() {

@@ -9,9 +9,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class BookControllerTest {
 
+
     BookService bookServiceMock = Mockito.mock(BookService.class);
     BookController bookController = new BookController(bookServiceMock);
-    BookDto book = new BookDto("Title 1", "Author 2");
+    BookDto book = new BookDto("Title 1", "Author 1");
 
     @Test
     public void shouldFetchBooks() {
@@ -22,7 +23,7 @@ class BookControllerTest {
         //when
         List<BookDto> result = bookController.getBooks();
         //then
-        assertThat(result).hasSize(2);
+        assertThat(result).hasSize(1);
     }
 
     @Test

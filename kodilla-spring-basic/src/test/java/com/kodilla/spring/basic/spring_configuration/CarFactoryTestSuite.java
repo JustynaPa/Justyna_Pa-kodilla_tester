@@ -23,6 +23,6 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
         Car car = (Car) context.getBean("dependingOnSeason");
         boolean headlightsStatus = car.hasHeadlightsTurnedOn();
-        Assertions.assertFalse(headlightsStatus);
+        Assertions.assertTrue(headlightsStatus);
     }
 }
