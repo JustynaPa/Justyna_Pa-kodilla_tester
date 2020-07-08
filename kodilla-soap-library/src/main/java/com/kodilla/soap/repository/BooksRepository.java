@@ -25,35 +25,41 @@ public class BooksRepository {
         bibliotheca.put(sciFi.getSignature(), sciFi);
 
         Book fantasy = new Book();
-        sciFi.setSignature("FAN/2020/JRRT/S");
-        sciFi.setAuthor("John Ronald Reuel Tolkien");
-        sciFi.setTitle("Silmarillion");
-        sciFi.setPublicationYear(2020);
-        sciFi.setGenre(Genre.FANTASY);
+        fantasy.setSignature("FAN/2020/JRRT/S");
+        fantasy.setAuthor("John Ronald Reuel Tolkien");
+        fantasy.setTitle("Silmarillion");
+        fantasy.setPublicationYear(2020);
+        fantasy.setGenre(Genre.FANTASY);
 
         bibliotheca.put(fantasy.getSignature(), fantasy);
 
         Book tech = new Book();
-        sciFi.setSignature("TECH/2017/JB/T");
-        sciFi.setAuthor("Jan Białek");
-        sciFi.setTitle("TECH. Krytyka rozwoju środowiska technologicznego");
-        sciFi.setPublicationYear(2017);
-        sciFi.setGenre(Genre.TECH);
+        tech.setSignature("TECH/2017/JB/T");
+        tech.setAuthor("Jan Białek");
+        tech.setTitle("TECH. Krytyka rozwoju środowiska technologicznego");
+        tech.setPublicationYear(2017);
+        tech.setGenre(Genre.TECH);
 
         bibliotheca.put(tech.getSignature(), tech);
 
         Book crime = new Book();
-        sciFi.setSignature("CRI/2020/HC/W");
-        sciFi.setAuthor("Harlan Coben");
-        sciFi.setTitle("W głębi lasu");
-        sciFi.setPublicationYear(2020);
-        sciFi.setGenre(Genre.CRIME);
+        crime.setSignature("CRI/2020/HC/W");
+        crime.setAuthor("Harlan Coben");
+        crime.setTitle("W głębi lasu");
+        crime.setPublicationYear(2020);
+        crime.setGenre(Genre.CRIME);
 
         bibliotheca.put(crime.getSignature(), crime);
     }
 
     public Book findBook(String signature) {
+        System.out.println("Get signature:" + signature);
+        System.out.println(bibliotheca);
         Assert.notNull(signature, "Please provide the book signature here: ");
-        return bibliotheca.get(signature);
+        Book result = bibliotheca.get(signature);
+        System.out.println(result);
+        return result;
     }
+
+
 }

@@ -23,8 +23,10 @@ public class BookEndpoint {
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getBookRequest")
     @ResponsePayload
     public GetBookResponse getCourse(@RequestPayload GetBookRequest request) {
+        System.out.println("Get course request" + request);
         GetBookResponse response = new GetBookResponse();
         response.setSignature(booksRepository.findBook(request.getSignature()));
+        System.out.println("Get course response" + response);
         return response;
     }
 }
