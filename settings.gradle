@@ -15,4 +15,6 @@ include 'kodilla-soap'
 include 'kodilla-soap-library'
 include 'sample'
 include 'kodilla-selenium'
+include 'kodilla-cucumber'
+include 'kodilla-cucumber'
 
