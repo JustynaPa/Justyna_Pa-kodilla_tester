@@ -4,6 +4,7 @@ Feature: Cash Withdrawal
     Given I have deposited $200 in my wallet
     When I request $<amount>
     Then $<amount> should be dispensed
+    And the balance of my wallet should be $170
     Examples:
     | amount |
     |   30   |
