@@ -17,4 +17,5 @@ include 'sample'
 include 'kodilla-selenium'
 include 'kodilla-cucumber'
 include 'kodilla-cucumber'
+include 'kodilla-code-coverage'
 
