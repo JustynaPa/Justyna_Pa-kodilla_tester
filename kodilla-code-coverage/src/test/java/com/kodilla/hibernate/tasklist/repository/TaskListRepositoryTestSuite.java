@@ -1,5 +1,6 @@
 package com.kodilla.hibernate.tasklist.repository;
 
+import com.kodilla.CodeCoverageApplication;
 import com.kodilla.hibernate.task.Task;
 import com.kodilla.hibernate.task.TaskFinancialDetails;
 import com.kodilla.hibernate.tasklist.TaskList;
@@ -14,7 +15,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(classes = CodeCoverageApplication.class)
 public class TaskListRepositoryTestSuite {
 
     @Autowired

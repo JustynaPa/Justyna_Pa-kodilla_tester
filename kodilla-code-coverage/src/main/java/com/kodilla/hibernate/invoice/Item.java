@@ -49,13 +49,13 @@ public class Item {
         return value;
     }
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "PRODUCT")
     public Product getProduct() {
         return product;
     }
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "INVOICE")
     public Invoice getInvoice() {
         return invoice;
