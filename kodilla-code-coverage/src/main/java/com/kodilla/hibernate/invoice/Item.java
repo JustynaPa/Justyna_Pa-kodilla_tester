@@ -17,12 +17,12 @@ public class Item {
     public Item() {
     }
 
-    public Item(BigDecimal price, int quantity, BigDecimal value, Product product) {
+    public Item(BigDecimal price, BigDecimal value, Product product) {
         this.price = price;
-        this.quantity = quantity;
         this.value = value;
         this.product = product;
     }
+
     @Id
     @GeneratedValue
     @NotNull
@@ -50,13 +50,13 @@ public class Item {
     }
 
     @ManyToOne
-    @JoinColumn(name = "PRODUCT_ID")
+    @JoinColumn(name = "PRODUCT")
     public Product getProduct() {
         return product;
     }
 
     @ManyToOne
-    @JoinColumn(name = "INVOICE_ID")
+    @JoinColumn(name = "INVOICE")
     public Invoice getInvoice() {
         return invoice;
     }

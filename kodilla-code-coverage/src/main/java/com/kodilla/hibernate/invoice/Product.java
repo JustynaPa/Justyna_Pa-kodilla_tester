@@ -17,6 +17,7 @@ public class Product {
     public Product(String name) {
         this.name = name;
     }
+
     @Id
     @GeneratedValue
     @NotNull
@@ -48,7 +49,7 @@ public class Product {
         this.name = name;
     }
 
-    public void setItem(List<Item> productItems) {
+    public void setProductItems(List<Item> productItems) {
         this.productItems = productItems;
     }
 }

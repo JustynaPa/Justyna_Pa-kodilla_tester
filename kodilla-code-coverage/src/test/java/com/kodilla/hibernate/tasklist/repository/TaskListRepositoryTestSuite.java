@@ -19,6 +19,7 @@ public class TaskListRepositoryTestSuite {
 
     @Autowired
     private TaskListRepository taskListRepository;
+
     private static final String DESCRIPTION = "Test: Learn Hibernate Homework edition";
 
     @Test
@@ -39,10 +40,10 @@ public class TaskListRepositoryTestSuite {
     @Test
     public void testTaskListRepositorySaveWithTasks() {
         //Given
-        Task task = new Task("Test: Learn Hibernate", 14);
-        Task task2 = new Task("Test: Write some entities", 3);
-        TaskFinancialDetails tfd = new TaskFinancialDetails(new BigDecimal(20), false);
-        TaskFinancialDetails tfd2 = new TaskFinancialDetails(new BigDecimal(10), false);
+        Task task = new Task("Test1", 1);
+        Task task2 = new Task("Test2", 2);
+        TaskFinancialDetails tfd = new TaskFinancialDetails(new BigDecimal(1), false);
+        TaskFinancialDetails tfd2 = new TaskFinancialDetails(new BigDecimal(2), false);
         task.setTaskFinancialDetails(tfd);
         task2.setTaskFinancialDetails(tfd2);
         TaskList taskList = new TaskList("New list", "ToDo tasks");
