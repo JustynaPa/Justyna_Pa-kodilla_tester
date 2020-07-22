@@ -11,7 +11,7 @@ public class Calculator {
     }
 
     public int toPowerOf(int a, int b) {
-        return Math.pow(a, b);
+        return (int) Math.pow(a, b);
     }
 
 }
