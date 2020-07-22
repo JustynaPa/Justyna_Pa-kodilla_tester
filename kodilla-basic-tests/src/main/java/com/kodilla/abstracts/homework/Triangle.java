@@ -2,14 +2,13 @@ package com.kodilla.abstracts.homework;
 
 public class Triangle extends Shape {
 
-    public Triangle() {
-        super(3);
+    public Triangle(int wallsQuantity) {
+        super(wallsQuantity);
     }
 
     @Override
     public void surfaceArea() {
-        System.out.println("Surface area = 1/2ah");
-
+        System.out.println("...");
     }
 
     @Override
